@@ -1,425 +1,512 @@
 <!DOCTYPE html>
 <html lang="ky">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App IT - Веб Иштеп чыгуу Курсу</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        header {
-            text-align: center;
-            background: #333;
-            color: white;
-            padding: 20px;
-            margin: -20px -20px 20px -20px;
-            border-radius: 10px 10px 0 0;
-        }
+      header {
+        text-align: center;
+        background: #333;
+        color: white;
+        padding: 20px;
+        margin: -20px -20px 20px -20px;
+        border-radius: 10px 10px 0 0;
+      }
 
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
+      h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
 
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-        }
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+      }
 
-        h3 {
-            color: #007bff;
-            margin-top: 20px;
-        }
+      h3 {
+        color: #007bff;
+        margin-top: 20px;
+      }
 
-        .team-member {
-            background: #f8f9fa;
-            padding: 15px;
-            margin: 10px 0;
-            border-left: 4px solid #007bff;
-            border-radius: 5px;
-        }
+      .team-member {
+        background: #f8f9fa;
+        padding: 15px;
+        margin: 10px 0;
+        border-left: 4px solid #007bff;
+        border-radius: 5px;
+      }
 
-        .team-photo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            float: left;
-            margin-right: 15px;
-            border: 3px solid #007bff;
-        }
+      .team-photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 15px;
+        border: 3px solid #007bff;
+      }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
 
-        th {
-            background: #007bff;
-            color: white;
-        }
+      th {
+        background: #007bff;
+        color: white;
+      }
 
-        tr:nth-child(even) {
-            background: #f8f9fa;
-        }
+      tr:nth-child(even) {
+        background: #f8f9fa;
+      }
 
-        form {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+      form {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
 
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
 
-        input[type="submit"] {
-            background: #007bff;
-            color: white;
-            cursor: pointer;
-            width: auto;
-            padding: 10px 20px;
-        }
+      input[type='submit'] {
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        width: auto;
+        padding: 10px 20px;
+      }
 
-        input[type="submit"]:hover {
-            background: #0056b3;
-        }
+      input[type='submit']:hover {
+        background: #0056b3;
+      }
 
-        .course-theme {
-            background: #e3f2fd;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 5px solid #007bff;
-        }
+      .course-theme {
+        background: #e3f2fd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border-left: 5px solid #007bff;
+      }
 
-        .hero-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+      .hero-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
 
-        .icon {
-            width: 30px;
-            height: 30px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
+      .icon {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-        ul li:before {
-            content: "✓ ";
-            color: #007bff;
-            font-weight: bold;
-            margin-right: 5px;
-        }
+      ul li:before {
+        content: '✓ ';
+        color: #007bff;
+        font-weight: bold;
+        margin-right: 5px;
+      }
 
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
 
-        a:hover {
-            text-decoration: underline;
-        }
+      a:hover {
+        text-decoration: underline;
+      }
 
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            background: #333;
-            color: white;
-            border-radius: 10px;
-        }
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        background: #333;
+        color: white;
+        border-radius: 10px;
+      }
 
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+      .clearfix::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header>
-            <h1>🚀 App IT</h1>
-            <p>Веб-иштеп чыгуу дүйнөсүнө кирүү эшиги</p>
-        </header>
+      <header>
+        <h1>🚀 App IT</h1>
+        <p>Веб-иштеп чыгуу дүйнөсүнө кирүү эшиги</p>
+      </header>
 
-        <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&h=200&fit=crop"
-            alt="Программалоо жана веб-иштеп чыгуу" class="hero-image">
+      <img
+        src="https://www.shutterstock.com/image-photo/programmer-people-working-laptops-smartphones-600nw-2473384115.jpg"
+        alt="Программалоо жана веб-иштеп чыгуу"
+        class="hero-image"
+      />
 
-        <main>
-            <section>
-                <h2>📖 Биз жөнүндө</h2>
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=150&h=100&fit=crop"
-                    alt="Команда иштөө" style="float: right; margin: 0 0 10px 20px; border-radius: 10px;">
-                <p>App IT - бул заманбап веб-иштеп чыгуу технологияларын үйрөткөн инновациялык билим берүү платформасы.
-                    Биз студенттерди нөлдөн баштап профессионалдык веб-иштеп чыгуучу болгонго чейин үйрөтөбүз.</p>
-                <p>Биздин максат - ар бир студентти IT дүйнөсүндө ийгиликтүү карьера куруу үчүн керектүү билим жана
-                    көндүмдөр менен камсыз кылуу.</p>
-                <div class="clearfix"></div>
-            </section>
+      <main>
+        <section>
+          <h2>📖 Биз жөнүндө</h2>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNqjcZOkInavTVg5WnehldLqMT4E00dJZU9Kjtw4TUZYSrXJXPcHfuMEc9wb0pZNv7pbU&usqp=CAU"
+            alt="Команда иштөө"
+            style="float: right; margin: 0 0 10px 20px; border-radius: 10px"
+          />
+          <p>
+            App IT - бул заманбап веб-иштеп чыгуу технологияларын үйрөткөн
+            инновациялык билим берүү платформасы. Биз студенттерди нөлдөн баштап
+            профессионалдык веб-иштеп чыгуучу болгонго чейин үйрөтөбүз.
+          </p>
+          <p>
+            Биздин максат - ар бир студентти IT дүйнөсүндө ийгиликтүү карьера
+            куруу үчүн керектүү билим жана көндүмдөр менен камсыз кылуу.
+          </p>
+          <div class="clearfix"></div>
+        </section>
 
-            <section>
-                <h2>👥 Биздин команда</h2>
+        <section>
+          <h2>👥 Биздин команда</h2>
+          <div class="team-member clearfix">
+            <img
+              src="https://bim-portal.ru/wp-content/uploads/2023/04/mark-zuckerberg.jpg"
+              alt="ASel Sovetbek"
+              class="team-photo"
+            />
+            <strong>ASel Sovetbek</strong> - адиси<br />
+            Frontend жана Backend боюнча адис
+          </div>
 
-                <div class="team-member clearfix">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
-                        alt="ASel Sovetbek" class="team-photo">
-                    <strong>ASel Sovetbek</strong> - адиси<br>
-                    Frontend жана Backend боюнча адис 
-                </div>
+          <div class="team-member clearfix">
+            <img
+              src="./images/photo_2022-08-28_13-49-47.jpg"
+              alt="Искак"
+              class="team-photo"
+            />
+            <strong>Искак</strong> - UI/UX дизайнер<br />
+            Креативдүү дизайн жана колдонуучу тажрыйбасы эксперти
+          </div>
 
-                <div class="team-member clearfix">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=80&h=80&fit=crop&crop=face"
-                        alt="Искак" class="team-photo">
-                    <strong>Искак</strong> - UI/UX дизайнер<br>
-                    Креативдүү дизайн жана колдонуучу тажрыйбасы эксперти
-                </div>
+          <div class="team-member clearfix">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bill_Gates_at_the_European_Commission_-_2025_-_P067383-987995_%28cropped%29.jpg/640px-Bill_Gates_at_the_European_Commission_-_2025_-_P067383-987995_%28cropped%29.jpg"
+              alt="Илимбек"
+              class="team-photo"
+            />
+            <strong>Илимбек</strong> - Ментор JS<br />
+            Инфраструктура жана автоматташтыруу адиси
+          </div>
 
-                <div class="team-member clearfix">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
-                        alt="Илимбек" class="team-photo">
-                    <strong>Илимбек</strong> - Ментор JS<br>
-                    Инфраструктура жана автоматташтыруу адиси
-                </div>
+          <div class="team-member clearfix">
+            <img
+              src="https://cdn.fishki.net/upload/post/201402/19/1245479/4775ed1ca891cfcbe692277bac1223af.jpg"
+              alt="Канымжан"
+              class="team-photo"
+            />
+            <strong>Канымжан</strong> - Менеджер<br />
+            Долбоор башкаруу жана студент колдоо кызматы
+          </div>
+        </section>
+        >>>>>>> c41921eef64864e396bff44f507554c0ae4fe957
 
-                <div class="team-member clearfix">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
-                        alt="Канымжан" class="team-photo">
-                    <strong>Канымжан</strong> - Менеджер<br>
-                    Долбоор башкаруу жана студент колдоо кызматы
-                </div>
-            </section>
+        <section>
+          <h2>📚 Курстун программасы</h2>
+          <img
+            src="https://i.pinimg.com/1200x/77/c1/6c/77c16cf060bf4eb708f1040531d7c9d2.jpg"
+            alt="HTML CSS JavaScript"
+            style="float: left; margin: 0 20px 10px 0; border-radius: 10px"
+          />
 
-            <section>
-                <h2>📚 Курстун программасы</h2>
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200&h=150&fit=crop"
-                    alt="HTML CSS JavaScript" style="float: left; margin: 0 20px 10px 0; border-radius: 10px;">
+          <div class="course-theme">
+            <h3>💻 ТЕМА 1: ВЕБ ДҮЙНӨСҮ + ИШ ЧӨЙРӨСҮ (2 сабак)</h3>
+            <ul>
+              <li>
+                <strong>Сабак 1 (Теория):</strong> Веб деген эмне?
+                Frontend/Backend + VS Code орнотуу
+              </li>
+              <li>
+                <strong>Сабак 2 (Практика):</strong> VS Code, Live Server, Emmet
+                менен иштөө
+              </li>
+            </ul>
+          </div>
 
-                <div class="course-theme">
-                    <h3>💻 ТЕМА 1: ВЕБ ДҮЙНӨСҮ + ИШ ЧӨЙРӨСҮ (2 сабак)</h3>
-                    <ul>
-                        <li><strong>Сабак 1 (Теория):</strong> Веб деген эмне? Frontend/Backend + VS Code орнотуу</li>
-                        <li><strong>Сабак 2 (Практика):</strong> VS Code, Live Server, Emmet менен иштөө</li>
-                    </ul>
-                </div>
+          <div class="course-theme">
+            <h3>🐙 ТЕМА 2: GITHUB НЕГИЗДЕРИ (2 сабак)</h3>
+            <ul>
+              <li>
+                <strong>Сабак 3 (Теория):</strong> GitHub каттоо, репозиторий
+                түзүү, README
+              </li>
+              <li>
+                <strong>Сабак 4 (Практика):</strong> Биринчи репо түзүү, файл
+                жүктөө
+              </li>
+            </ul>
+          </div>
 
-                <div class="course-theme">
-                    <h3>🐙 ТЕМА 2: GITHUB НЕГИЗДЕРИ (2 сабак)</h3>
-                    <ul>
-                        <li><strong>Сабак 3 (Теория):</strong> GitHub каттоо, репозиторий түзүү, README</li>
-                        <li><strong>Сабак 4 (Практика):</strong> Биринчи репо түзүү, файл жүктөө</li>
-                    </ul>
-                </div>
+          <div class="course-theme">
+            <h3>🔄 ТЕМА 3: GIT КОМАНДАЛАРЫ (2 сабак)</h3>
+            <ul>
+              <li>
+                <strong>Сабак 5 (Теория):</strong> Git: init, add, commit, push,
+                pull, branch
+              </li>
+              <li>
+                <strong>Сабак 6 (Практика):</strong> Git командалары менен иштөө
+              </li>
+            </ul>
+          </div>
 
-                <div class="course-theme">
-                    <h3>🔄 ТЕМА 3: GIT КОМАНДАЛАРЫ (2 сабак)</h3>
-                    <ul>
-                        <li><strong>Сабак 5 (Теория):</strong> Git: init, add, commit, push, pull, branch</li>
-                        <li><strong>Сабак 6 (Практика):</strong> Git командалары менен иштөө</li>
-                    </ul>
-                </div>
+          <div class="course-theme">
+            <h3>📋 ТЕМА 4: JIRA/CONFLUENCE (2 сабак)</h3>
+            <ul>
+              <li>
+                <strong>Сабак 7 (Теория):</strong> Jira: таск алуу, статустар,
+                Confluence: документация
+              </li>
+              <li>
+                <strong>Сабак 8 (Практика):</strong> Jira менен тапшырма аткаруу
+              </li>
+            </ul>
+          </div>
 
-                <div class="course-theme">
-                    <h3>📋 ТЕМА 4: JIRA/CONFLUENCE (2 сабак)</h3>
-                    <ul>
-                        <li><strong>Сабак 7 (Теория):</strong> Jira: таск алуу, статустар, Confluence: документация</li>
-                        <li><strong>Сабак 8 (Практика):</strong> Jira менен тапшырма аткаруу</li>
-                    </ul>
-                </div>
+          <div class="course-theme">
+            <h3>🏗️ ТЕМА 5: HTML НЕГИЗДЕРИ - 1 (2 сабак)</h3>
+            <ul>
+              <li>
+                <strong>Сабак 9 (Теория):</strong> HTML структура, негизги
+                тэгдер, атрибуттар
+              </li>
+              <li>
+                <strong>Сабак 10 (Практика):</strong> Биринчи HTML баракча жазуу
+              </li>
+            </ul>
+          </div>
 
-                <div class="course-theme">
-                    <h3>🏗️ ТЕМА 5: HTML НЕГИЗДЕРИ - 1 (2 сабак)</h3>
-                    <ul>
-                        <li><strong>Сабак 9 (Теория):</strong> HTML структура, негизги тэгдер, атрибуттар</li>
-                        <li><strong>Сабак 10 (Практика):</strong> Биринчи HTML баракча жазуу</li>
-                    </ul>
-                </div>
+          <div class="course-theme">
+            <h3>🎨 ТЕМА 6: HTML НЕГИЗДЕРИ - 2 (2 сабак)</h3>
+            <ul>
+              <li>
+                <strong>Сабак 11 (Теория):</strong> Шилтемелер, сүрөттөр,
+                тизмелер, навигация
+              </li>
+              <li>
+                <strong>Сабак 12 (Практика):</strong> Портфолио баракчанын
+                негизи
+              </li>
+            </ul>
+          </div>
 
-                <div class="course-theme">
-                    <h3>🎨 ТЕМА 6: HTML НЕГИЗДЕРИ - 2 (2 сабак)</h3>
-                    <ul>
-                        <li><strong>Сабак 11 (Теория):</strong> Шилтемелер, сүрөттөр, тизмелер, навигация</li>
-                        <li><strong>Сабак 12 (Практика):</strong> Портфолио баракчанын негизи</li>
-                    </ul>
-                </div>
+          <div class="course-theme">
+            <h3>📝 ТЕМА 7: HTML ФОРМАЛАР жана ТАБЛИЦАЛАР (2 сабак)</h3>
+            <ul>
+              <li>
+                <strong>Сабак 13 (Теория):</strong> Form элементтери,
+                таблицалар, медиа
+              </li>
+              <li>
+                <strong>Сабак 14 (Практика):</strong> Толук портфолио: форма +
+                таблица
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </section>
 
-                <div class="course-theme">
-                    <h3>📝 ТЕМА 7: HTML ФОРМАЛАР жана ТАБЛИЦАЛАР (2 сабак)</h3>
-                    <ul>
-                        <li><strong>Сабак 13 (Теория):</strong> Form элементтери, таблицалар, медиа</li>
-                        <li><strong>Сабак 14 (Практика):</strong> Толук портфолио: форма + таблица</li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </section>
+        <section>
+          <h2>📊 Курс статистикасы</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Көрсөткүч</th>
+                <th>Маани</th>
+                <th>Белгилөө</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Жалпы сабактар саны</td>
+                <td>14 сабак</td>
+                <td>⭐</td>
+              </tr>
+              <tr>
+                <td>Темалар саны</td>
+                <td>7 тема</td>
+                <td>📚</td>
+              </tr>
+              <tr>
+                <td>Теориялык сабактар</td>
+                <td>7 сабак</td>
+                <td>🧠</td>
+              </tr>
+              <tr>
+                <td>Практикалык сабактар</td>
+                <td>7 сабак</td>
+                <td>💻</td>
+              </tr>
+              <tr>
+                <td>Курстун узактыгы</td>
+                <td>7 жума</td>
+                <td>⏰</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-            <section>
-                <h2>📊 Курс статистикасы</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Көрсөткүч</th>
-                            <th>Маани</th>
-                            <th>Белгилөө</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Жалпы сабактар саны</td>
-                            <td>14 сабак</td>
-                            <td>⭐</td>
-                        </tr>
-                        <tr>
-                            <td>Темалар саны</td>
-                            <td>7 тема</td>
-                            <td>📚</td>
-                        </tr>
-                        <tr>
-                            <td>Теориялык сабактар</td>
-                            <td>7 сабак</td>
-                            <td>🧠</td>
-                        </tr>
-                        <tr>
-                            <td>Практикалык сабактар</td>
-                            <td>7 сабак</td>
-                            <td>💻</td>
-                        </tr>
-                        <tr>
-                            <td>Курстун узактыгы</td>
-                            <td>7 жума</td>
-                            <td>⏰</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+        <section>
+          <h2>📞 Биз менен байланышуу</h2>
+          <img
+            src="https://i.pinimg.com/1200x/36/d3/73/36d3733c4e293d97e42fc962938674d4.jpg"
+            alt="Байланыш"
+            style="float: right; margin: 0 0 10px 20px; border-radius: 10px"
+            width="240px"
+            height="200px"
+          />
+          <form>
+            <p>
+              <label for="name">Атыңыз:</label><br />
+              <input type="text" id="name" name="name" required />
+            </p>
 
-            <section>
-                <h2>📞 Биз менен байланышуу</h2>
-                <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=150&h=100&fit=crop"
-                    alt="Байланыш" style="float: right; margin: 0 0 10px 20px; border-radius: 10px;">
-                <form>
-                    <p>
-                        <label for="name">Атыңыз:</label><br>
-                        <input type="text" id="name" name="name" required>
-                    </p>
+            <p>
+              <label for="email">Email:</label><br />
+              <input type="email" id="email" name="email" required />
+            </p>
 
-                    <p>
-                        <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required>
-                    </p>
+            <p>
+              <label for="phone">Телефон:</label><br />
+              <input type="tel" id="phone" name="phone" />
+            </p>
 
-                    <p>
-                        <label for="phone">Телефон:</label><br>
-                        <input type="tel" id="phone" name="phone">
-                    </p>
+            <p>
+              <label for="course">Кызыккан курс:</label><br />
+              <select id="course" name="course">
+                <option value="web-development">Веб-иштеп чыгуу</option>
+                <option value="frontend">Frontend иштеп чыгуу</option>
+                <option value="backend">Backend иштеп чыгуу</option>
+                <option value="fullstack">Fullstack иштеп чыгуу</option>
+              </select>
+            </p>
 
-                    <p>
-                        <label for="course">Кызыккан курс:</label><br>
-                        <select id="course" name="course">
-                            <option value="web-development">Веб-иштеп чыгуу</option>
-                            <option value="frontend">Frontend иштеп чыгуу</option>
-                            <option value="backend">Backend иштеп чыгуу</option>
-                            <option value="fullstack">Fullstack иштеп чыгуу</option>
-                        </select>
-                    </p>
+            <p>
+              <label for="experience">Тажрыйбаңыз:</label><br />
+              <select id="experience" name="experience">
+                <option value="beginner">Жаңы башташ</option>
+                <option value="basic">Негизги билим</option>
+                <option value="intermediate">Орто деңгээл</option>
+                <option value="advanced">Жогорку деңгээл</option>
+              </select>
+            </p>
 
-                    <p>
-                        <label for="experience">Тажрыйбаңыз:</label><br>
-                        <select id="experience" name="experience">
-                            <option value="beginner">Жаңы башташ</option>
-                            <option value="basic">Негизги билим</option>
-                            <option value="intermediate">Орто деңгээл</option>
-                            <option value="advanced">Жогорку деңгээл</option>
-                        </select>
-                    </p>
+            <p>
+              <label for="message">Кошумча кабар:</label><br />
+              <textarea id="message" name="message" rows="4"></textarea>
+            </p>
 
-                    <p>
-                        <label for="message">Кошумча кабар:</label><br>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </p>
+            <p>
+              <input type="submit" value="Жөнөтүү" />
+            </p>
+          </form>
+          <div class="clearfix"></div>
+        </section>
 
-                    <p>
-                        <input type="submit" value="Жөнөтүү">
-                    </p>
-                </form>
-                <div class="clearfix"></div>
-            </section>
+        <section>
+          <h2>🔗 Пайдалуу шилтемелер</h2>
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=150&h=100&fit=crop"
+            alt="Код жазуу"
+            style="float: left; margin: 0 20px 10px 0; border-radius: 10px"
+          />
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org" target="_blank"
+                >MDN Web Docs</a
+              >
+              - HTML жана веб технологиялар боюнча документация
+            </li>
+            <li>
+              <a href="https://github.com" target="_blank">GitHub</a> - Код
+              сактоо жана бөлүшүү платформасы
+            </li>
+            <li>
+              <a href="https://code.visualstudio.com" target="_blank"
+                >VS Code</a
+              >
+              - Код редактору
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </section>
 
-            <section>
-                <h2>🔗 Пайдалуу шилтемелер</h2>
-                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=150&h=100&fit=crop"
-                    alt="Код жазуу" style="float: left; margin: 0 20px 10px 0; border-radius: 10px;">
-                <ul>
-                    <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a> - HTML жана веб
-                        технологиялар боюнча документация</li>
-                    <li><a href="https://github.com" target="_blank">GitHub</a> - Код сактоо жана бөлүшүү платформасы
-                    </li>
-                    <li><a href="https://code.visualstudio.com" target="_blank">VS Code</a> - Код редактору</li>
-                </ul>
-                <div class="clearfix"></div>
-            </section>
+        <section>
+          <h2>🎥 Медиа ресурстар</h2>
+          <img
+            src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=150&fit=crop"
+            alt="Видео дарс"
+            style="float: right; margin: 0 0 10px 20px; border-radius: 10px"
+          />
+          <p>
+            Биздин видео материалдарды көрүп, үйрөнүү процессин жеңилдетиңиз:
+          </p>
+          <ul>
+            <li>HTML негиздери видео дарстары</li>
+            <li>GitHub колдонуу боюнча көрсөтүүлөр</li>
+            <li>Практикалык тапшырмалардын видео чыгарылышы</li>
+          </ul>
+          <div class="clearfix"></div>
+        </section>
+      </main>
 
-            <section>
-                <h2>🎥 Медиа ресурстар</h2>
-                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=150&fit=crop"
-                    alt="Видео дарс" style="float: right; margin: 0 0 10px 20px; border-radius: 10px;">
-                <p>Биздин видео материалдарды көрүп, үйрөнүү процессин жеңилдетиңиз:</p>
-                <ul>
-                    <li>HTML негиздери видео дарстары</li>
-                    <li>GitHub колдонуу боюнча көрсөтүүлөр</li>
-                    <li>Практикалык тапшырмалардын видео чыгарылышы</li>
-                </ul>
-                <div class="clearfix"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2024 App IT. Бардык укуктар корголгон.</p>
-            <p>📧 Байланыш: info@appit.kg | 📞 Телефон: +996 555 123 456</p>
-        </footer>
+      <footer>
+        <p>&copy; 2024 App IT. Бардык укуктар корголгон.</p>
+        <p>📧 Байланыш: info@appit.kg | 📞 Телефон: +996 555 123 456</p>
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>
